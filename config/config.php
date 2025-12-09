@@ -1,7 +1,7 @@
 <?php
 
 // Configuración de MongoDB
-define('MONGODB_URI', 'mongodb://localhost:27017');
+define('MONGODB_URI', 'mongodb://asistencia_mongodb:27017');
 define('MONGODB_DATABASE', 'asistencia_app');
 
 // Configuración de administrador
