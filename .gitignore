@@ -1,0 +1,62 @@
+# .gitignore - Archivos y carpetas a ignorar en Git
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# PHP
+vendor/
+composer.lock
+*.log
+logs/
+
+# Node (si se usa en el futuro)
+node_modules/
+package-lock.json
+yarn.lock
+dist/
+build/
+
+# Temporal
+tmp/
+temp/
+cache/
+*.tmp
+
+# OS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Desktop.ini
+$RECYCLE.BIN/
+
+# Archivos de configuración local
+config/local.php
+config/.env.local
+
+# Bases de datos locales
+*.db
+*.sqlite
+dump.rdb
+
+# Testing
+coverage/
+.phpunit.cache/
+
+# Directorios específicos
+/public/uploads/
+/public/cache/
+/storage/

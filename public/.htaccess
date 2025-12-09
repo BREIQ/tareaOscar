@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # No reescribir si es un archivo real
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # No reescribir si es un directorio real
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Reescribir todas las solicitudes a index.php
+    RewriteRule ^(.*)$ index.php/$1 [L]
+    
+    # Regla especial para API
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^api/(.*)$ api.php/$1 [L]
+</IfModule>
+
+# Configuración adicional
+<IfModule mod_headers.c>
+    # Permitir acceso CORS (si es necesario)
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>

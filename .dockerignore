@@ -1,0 +1,17 @@
+# .dockerignore
+.git
+.gitignore
+.env.local
+.env.*.local
+.vscode
+.idea
+*.swp
+*.swo
+*~
+node_modules/
+vendor/
+logs/
+*.log
+.DS_Store
+Thumbs.db
+tests/
